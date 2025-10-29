@@ -6,6 +6,8 @@
 
 ![Tasklist](assets/tasklist.png)
 
+![Recieved Email](assets/email.png)
+
 ToDo is a simple yet effective task management application that helps users keep track of their tasks and receive timely email reminders for upcoming deadlines. The application is built with a FastAPI backend and a React frontend, making it a robust and scalable solution.
 
 ## Features
