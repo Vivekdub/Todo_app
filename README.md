@@ -26,7 +26,7 @@ Follow these steps to set up and run the todo application locally.
 
 ```bash
 git clone <your-repository-url>
-cd ziedler
+cd ToDo_app
 ```
 
 ### 2. Backend Setup
