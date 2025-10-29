@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #4A90E2; /* A modern blue */
+  --primary-dark: #357ABD;
+  --secondary-color: #50E3C2; /* A fresh green */
+  --text-color: #333;
+  --background-color: #F8F9FA;
+  --card-background: #FFFFFF;
+  --border-color: #E0E0E0;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --error-color: #E03B24;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* A modern, clean font */
+  background: var(--background-color);
+  padding: 1.5rem;
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: var(--card-background);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+  color: var(--primary-dark);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+textarea {
+  padding: 0.8em 1em;
+  font-size: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: calc(100% - 2em); /* Adjust for padding */
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.task-table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: separate; /* For rounded corners */
+  border-spacing: 0;
+  overflow: hidden; /* For rounded corners on first/last row */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.task-table th, .task-table td {
+  text-align: left;
+  padding: 1em 1.2em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.task-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.task-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.task-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.task-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+.action-buttons button {
+  padding: 0.5em 0.8em;
+  font-size: 0.9em;
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #ffe0b2; /* Light orange */
+  color: #fb8c00; /* Darker orange */
+}
+
+.status-completed {
+  background-color: #c8e6c9; /* Light green */
+  color: #43a047; /* Darker green */
+}
+
+.status-mailed {
+  background-color: #bbdefb; /* Light blue */
+  color: #2196f3; /* Darker blue */
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  body {
+    padding: 0.5rem;
+  }
+
+  .task-table th, .task-table td {
+    padding: 0.8em;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+alembic
+pydantic
+python-jose[cryptography]
+bcrypt
+python-dotenv
+apscheduler
+email-validator
